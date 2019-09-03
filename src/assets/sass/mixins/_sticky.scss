@@ -1,0 +1,11 @@
+@mixin sticky($top, $z-index) {
+  .csspositionsticky & {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top:$top;
+    z-index: $z-index;
+  }
+}

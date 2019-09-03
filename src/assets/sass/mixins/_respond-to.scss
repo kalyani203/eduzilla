@@ -1,0 +1,73 @@
+@mixin respond-to($type, $media:none) {
+  @if $ielt9 {
+    @content; // Transparently ignore media queries for older IE browsers.
+  } @else {
+    // @todo(todd): review device ranges
+    // Device ranges
+    $device-range-smartphone: 320px;
+    $device-range-tablet: 600px;
+    $device-range-laptop: 1025px;
+    $device-range-laptop-touch: 1280px;
+    $device-range-standard: 1410px;
+    $device-range-widerscreen: 1440px;
+    $device-range-widescreen: $device-range-laptop; 
+
+    /* Custom breakpoint for changing search panel to hidden style to always give room for the search box*/
+    $custom-700: 700px;
+    $custom-1023: 1023px;
+
+    @if $type == smartphone {
+      @media screen and (min-device-width:$device-range-smartphone) { /* MQ Smartphone */ @content; }
+    }
+    @if $type == smartphone-only {
+      @media screen and (min-width:1px) and (max-width:$device-range-tablet - 1) { /* MQ Smartphone only */ @content; } // @todo(rob): Review Smartphone-only
+    }
+    @if $type == tablet-smartphone-only {
+      @media screen and (min-width:1px) and (max-width:$device-range-laptop - 1) { /* MQ Smartphone only */ @content; } // @todo(rob): Review Smartphone-only
+    }
+    @if $type == tablet {
+      @media screen and (min-width:$device-range-tablet) { /* MQ Tablet */ @content; }
+    }
+    @if $type == tablet-only {
+      @media screen and (min-width:$device-range-tablet) and (max-width: $device-range-laptop - 1) { /* MQ Tablet only */ @content; }
+    }
+    @if $type == laptop {
+      @media screen and (min-width:$device-range-laptop) { /* MQ Laptop */ @content;}
+    }
+    @if $type == standard {
+      @media screen and (min-width:$device-range-standard) { /* MQ Widescreen */ @content;}
+    }
+    @if $type == widescreen {
+      @media screen and (min-width:$device-range-widescreen) { /* MQ Widescreen */ @content;}
+    }
+    @if $type == widerscreen {
+      @media screen and (min-width:$device-range-widerscreen) { /* MQ Widescreen */ @content;}
+    }
+    @if $type == laptop-touch {
+      @media screen and (min-width:$device-range-laptop-touch) { /* MQ Widescreen */ @content;}
+    }
+    
+
+    /* Specfic breakpoint for changing search panel to hidden style to always give room for the search box*/
+    @if $type == custom-700 {
+      @media screen and (min-width:$custom-700) { /* MQ Widescreen */ @content;}
+    }
+    @if $type == custom-1023 {
+      @media screen and (min-width:$custom-1023) { /* MQ Widescreen */ @content;}
+    }
+
+    // Content break point
+    @if $type == break-point {
+      @media screen and ($media) { /* MQ Break point */ @content; }
+    }
+
+    // To check orientation mode in mobile devices
+    @if $type == portrait {
+      @media screen and (orientation:portrait) { /* portrait-specific styles */ @content; }  
+    }
+    
+    @if $type == landscape {
+      @media screen and (orientation:landscape) { /* landscape-specific styles */ @content; }
+    }
+  }
+}

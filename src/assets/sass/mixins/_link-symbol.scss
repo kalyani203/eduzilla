@@ -1,0 +1,11 @@
+@mixin link-symbol {
+	&:before {
+		content: '\00BB\0020'; /* raquo + space */
+	}
+}
+
+@mixin show-less-symbol {
+  &:before {
+    content: '\00AB\0020'; /* '<<'' + space */
+  }
+}

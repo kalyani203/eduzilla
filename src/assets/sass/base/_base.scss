@@ -1,0 +1,202 @@
+html {
+  font: $base-size $font-primary; /* Widescreen Global base font-size */
+}
+
+body {
+  @include font-size($bodySize);
+  background:$neutral-13 url(/assets/images/body-bg.png) repeat;
+  color: $type-1;
+  min-width: 320px;
+}
+
+/* Typography
+------------------------------------------------------------------------------*/
+
+h1, h2 {
+  font-family: $font-secondary;
+  font-weight: normal;
+  letter-spacing: $headline-letter-spacing;
+  line-height: 1.2;
+}
+
+h1 {
+  @include font-size($size26);
+  margin: 7px 0 14px;
+
+  @include respond-to (tablet) {
+    @include font-size($size30);
+  }
+
+}
+
+h1 span {
+  color: $type-5;
+}
+
+h2 {
+  @include font-size($size24);
+  margin: 7px 0;
+}
+
+h3 {
+  @include font-size($size16);
+  font-weight: normal;
+  margin: 7px 0 5px;
+}
+
+/* Links
+------------------------------------------------------------------------------*/
+
+a {
+  color: $action-1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: $action-1;
+  text-decoration: underline;
+}
+
+/* truncator */
+a[href='#more'],
+a[href='#less'] {
+  color: $type-3;
+  @include font-size($size11);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+a[href='#more']:hover,
+a[href='#less']:hover {
+  color: $type-1;
+}
+
+/* external */
+a.external:after { /* blue external link indicator */
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYlWNgLDv8H4YZoABFDFkCGeBVABPDqgBDA7rdWO3C5gacVmBVgA8DACqIPj0jO7W7AAAAAElFTkSuQmCC') no-repeat right center;
+  /* patternify URL: http://ptrn.it/ugEXX3 */
+  content: '';
+  display: inline-block;
+  height: 8px;
+  margin-left: 7px;
+  width: 8px;
+
+  .section--references & {
+    margin-left: 3px;
+  }
+}
+
+/* Forms
+------------------------------------------------------------------------------*/
+
+button,
+input,
+select,
+textarea {
+  color: $type-3;
+  font-family: $font-primary;
+}
+
+input[type=text],
+input[type=number],
+input[type=date],
+input[type=password],
+textarea {
+  background-color: $white;
+  border: 1px solid $neutral-5;
+  @include border-radius($border-radius-s);
+  @include box-shadow(inset 2px 2px 5px $neutral-12);
+  @include font-size($bodySize);
+  padding: 4px 3px;
+  outline: none;
+}
+
+input[type=text].placeholder,
+input[type=password].placeholder {
+  color: $type-5;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+  border-color: $action-1;
+  @include box-shadow(0 0 3px $action-1);
+  outline: none;
+}
+
+button,
+input[type=button],
+input[type=submit],
+input[type=image],
+label {
+  cursor: pointer;
+  outline: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* remove button padding in firefox */
+  border: 0;
+  padding: 0;
+}
+
+.lt-ie8 input,
+.lt-ie8 select {
+  vertical-align: middle;
+}
+
+/* Definition list */
+dl {
+  dt {
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+  }
+  dd {
+    display: block;
+    margin: 0 0 7px;
+  }
+}
+
+.js-hidden,
+.tooltip {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hide{
+  display: none;
+}
+
+.hide-on-screen{
+  display: none;
+}
+
+.textbox__wrapper {
+  input{
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color:    #999999;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color:    #999999;
+      opacity:  1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color:    #999999;
+      opacity:  1;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color:    #999999;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color:    #999999;
+    }
+  }
+}

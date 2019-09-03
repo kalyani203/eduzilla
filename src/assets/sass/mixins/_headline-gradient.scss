@@ -1,0 +1,10 @@
+@mixin headline-gradient {
+	@include box-shadow(inset 0 -1px 0 0 #FFF, inset 0 -18px 18px -18px $neutral-12);
+	border-bottom: 1px solid #D7D6D6;
+	padding: 0 4px 7px 0;
+}
+
+@mixin footerline-gradient {
+  border-top: 1px solid #D7D6D6;
+  padding: 0 4px 7px 0;
+}

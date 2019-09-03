@@ -1,0 +1,44 @@
+// Any png image placed in a theme's sprite folder will be added to that theme's sprite.
+// Include them by using the 'from-sprite' mixin.
+
+$springer-sprite-map: sprite-map("springer-sprite/*.png");
+$springer-sprite-map-url: sprite-url($springer-sprite-map);
+$gsj-sprite-map: sprite-map("gsj-sprite/*.png");
+$gsj-sprite-map-url: sprite-url($gsj-sprite-map);
+
+@import "springer-sprite/*.png";
+@import "gsj-sprite/*.png";
+@if $site-name == gsj {
+	@include all-gsj-sprite-sprites;
+} @else {
+	@include all-springer-sprite-sprites;	
+}
+
+@mixin from-sprite($image-name){
+	@if($site-name == gsj) {
+		@include get-sprite($gsj-sprite-map, $image-name, $gsj-sprite-map-url);
+	} @else {
+		@include get-sprite($springer-sprite-map, $image-name, $springer-sprite-map-url);
+	}
+}
+
+// Fix for compass issue with @extend being used inside @media
+// From: https://github.com/nex3/sass/issues/456
+@mixin get-sprite($map, $sprite, $sprite-map-url)
+{
+  $repeat: no-repeat;
+  $sprite-map: $sprite-map-url;
+
+  //http://compass-style.org/reference/compass/helpers/sprites/#sprite-file
+  $sprite-image: sprite-file($map, $sprite);
+  
+  // http://compass-style.org/reference/compass/helpers/sprites/#sprite-url
+  //$sprite-map: sprite-url($map);
+  
+  // http://compass-style.org/reference/compass/helpers/sprites/#sprite-position
+  $sprite-position: sprite-position($map, $sprite);
+  
+  // Returns background
+  background: $sprite-map $sprite-position $repeat;
+
+}

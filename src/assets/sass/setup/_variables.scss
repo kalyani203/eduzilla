@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/* COLOUR
+Standardized colour palette
+*********************************************************************************************************/
+$black: #000;
+$white: #fff;
+// Actions
+$action-1: #0176c3; // master colour
+$action-2: #02548a;
+$action-3: #0266a8;
+$action-4: #38a0e5;
+$action-5: #70bced;
+$action-6: #b3dcf5;
+$action-7: #d7ecfa;
+$action-8: #edf5fb;
+// Get access
+$get-access-1: #ffc000; // master colour
+$get-access-2: #fdda4c;
+$get-access-3: #fdea9d;
+$get-access-4: #feeeae;
+$get-access-5: #fff3c6;
+$get-access-6: #fff9e0;
+$get-access-7: #fffdf4;
+// Accent
+$accent-1: #ee7d11; // master colour
+$accent-2: #ce4900;
+$accent-3: #e06310;
+$accent-4: #f5b87f;
+$accent-5: #fae3cd;
+// Highlight (only used on the homepage)
+$highlight-1: #a82764; // master colour
+$highlight-2: #c685a4;
+// Success
+$success-green-1: #71ab0b; // master colour
+$success-green-2: #f1f6e6;
+// Error
+$error-red-1: #c40606; // master colour
+$error-red-2: #ef0a0a;
+// Type
+$type-1: #333333; // master colour
+$type-2: #555555;
+$type-3: #666666;
+$type-4: #777777;
+$type-5: #999999;
+$type-6: #AAAAAA;
+// Neutrals
+$neutral-1: #222222; // master colour
+$neutral-2: #3d3e43; // mobile only
+$neutral-3: #4c4d51; // mobile only
+$neutral-4: #aaaaaa;
+$neutral-5: #bcbcbc;
+$neutral-6: #cccccc;
+$neutral-7: #d0d0d0;
+$neutral-8: #d7d7d7;
+$neutral-9: #dcdcdc; // gainsboro
+$neutral-10: #e5e5e5;
+$neutral-11: #eaeaea;
+$neutral-12: #efefef;
+$neutral-13: #f1f1f1;
+$neutral-14: #f4f4f4;
+$neutral-15: #f8f8f8;
+$neutral-16: #f9f9f9;
+$neutral-17: #ffffff;
+$neutral-18: #e9e9e9;
+
+// Facets
+$facet-1: $accent-1; // master colour
+$facet-2: $accent-2;
+// Strength indication (weakest, weak, strong)
+$strength-weakest-1: #c40606; // master colour
+$strength-weakest-2: #ff7575;
+$strength-weak-1: #ffcc00; // master colour
+$strength-weak-2: #ffe282;
+$strength-strong-1: #1b9d01; // master colour
+$strength-strong-2: #57c840;
+
+/* TYPOGRAPHY
+Standardized sizes and families
+*********************************************************************************************************/
+$headline-letter-spacing: .02em;
+$base-size:   10px;
+$subscript:   9;  /* Subscript/Superscript */
+$size10:      10; /* To Be Defined */
+$size11:      11; /* To Be Defined */
+$size12:      12; /* To Be Defined */
+$bodySize:    13; /* Default Body Text Size */
+$size15:      15; /* To Be Defined */
+$size14:      14; /* To Be Defined */
+$size16:      16; /* To Be Defined */
+$size18:      18; /* To Be Defined */
+$size20:      20; /* To Be Defined */
+$size22:      22; /* To Be Defined */
+$size24:      24; /* To Be Defined */
+$size26:      26; /* To Be Defined */
+$size30:      30; /* To Be Defined */
+$size40:      40; /* To Be Defined */
+
+$font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-secondary: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+
+
+/* Z-INDEX
+Standarised z-index levels (excluding look-inside)
+*********************************************************************************************************/
+$level1:            5;
+$level2:            10;
+$level3:            15;
+$level4:            20;
+$level5:            25;
+$top-level:         9999;
+$top-most-level:    $top-level + 1;
+$lookinside-level:  $top-level - 5;
+
+
+/* TEXTURE
+border-radii (gradients, shadows, etc. could potentially go here)
+*********************************************************************************************************/
+$border-radius-s:                           2px;
+$border-radius-m:                           3px;
+$border-radius-help:                        4px;
+
+
+/* LOGO DEFAULTS
+*
+* Default behaviour is to have an extension next to the logo but no qualifier (eduZilla style).
+*
+* Logo with EXTENSION looks like: eduZilla
+* Logo with QUALIFIER looks like: eduZilla    For Research&Development
+*
+*********************************************************************************************************/
+$footer-logo-width-smart-phone:             122px;
+$footer-logo-width-tablet:                  158px;
+$header-logo-width-tablet:                  160px;
+$header-logo-width-widescreen:              190px;
+$header-search-panel-width-tablet: 			45.041667%;
+$header-search-panel-left-tablet: 			200px;
+
+/* Alerts */
+$alert-warning-border: #FFC000;
+$alert-warning-bg: #FFF9E5;
+$alert-error-border: #C40606;
+$alert-error-bg: #F7E8E8;
+$alert-success-border:#71AB0B;
+$alert-success-bg:#F1F6E6;
+$alert-info-border:#38A0E5;
+$alert-info-bg:#EBF5FC;

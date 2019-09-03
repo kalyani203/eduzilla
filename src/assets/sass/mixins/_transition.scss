@@ -1,0 +1,14 @@
+@mixin transition($value) {
+	-webkit-transition: $value;
+		 -moz-transition: $value;
+			 -o-transition: $value;
+					transition: $value;
+}
+
+@mixin transitionBackground($value) {
+	-webkit-transition: background $value;
+		 -moz-transition: background $value;
+			 -o-transition: background $value;
+			-ms-transition: background $value;
+					transition: background $value;
+}

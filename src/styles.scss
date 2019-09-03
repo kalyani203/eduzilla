@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+$ielt9: false !default; // !default means it will be overwritten if defined in IE specific stylesheet
+
+
+// Setup variables
+@import "assets/sass/setup/variables";
+
+
+@import "assets/sass/mixins/bg-gradient",
+"assets/sass/mixins/border-radius",
+"assets/sass/mixins/box-shadow",
+"assets/sass/mixins/box-sizing",
+"assets/sass/mixins/clearfix",
+"assets/sass/mixins/font-size",
+"assets/sass/mixins/for-high-res",
+"assets/sass/mixins/headline-gradient",
+"assets/sass/mixins/img-replacement",
+"assets/sass/mixins/link-symbol",
+"assets/sass/mixins/pseudo-element",
+"assets/sass/mixins/respond-to",
+"assets/sass/mixins/sticky",
+"assets/sass/mixins/transition",
+"assets/sass/mixins/opacity",
+"assets/sass/mixins/word-break",
+"assets/sass/mixins/triangle";
+
+@import "assets/sass/base/base";
+
+@import "assets/sass/page_specific/login";
+
+@import "components/app/app.component";

@@ -1,0 +1,10 @@
+@mixin img-replacement {
+	background-repeat: no-repeat;
+	color: transparent; /* IE 6 & 7 for input */
+	direction: ltr;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -9999em;
+	text-transform: capitalize; /* IE 6 & 7 for input */
+}

@@ -1,0 +1,6 @@
+@mixin word-break() {
+  word-break:break-all;
+  word-wrap:break-word;
+  display:inline-block;
+}
+

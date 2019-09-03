@@ -1,0 +1,42 @@
+<div class="wrap-login">
+  <div class="validate-form">
+    <div>
+      <div>
+        <a class="logo-name"></a>
+      </div>
+      <form class="m-t" role="form" action="#">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Username" required="">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" required="">
+        </div>
+        <button type="submit" class="login-button">Login</button>
+
+        <a class="forgot-password" ui-sref="forgot_password" href="#"><small>Forgot password?</small></a>
+
+        <div class="other-signin">
+          <p>Or Sign In Using</p>
+          <div class="flex-c-m">
+            <a href="#" class="form-social-item flex-c-m bg1">
+              <i class="fa fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="btn-twitter form-social-item flex-c-m bg2">
+              <i class="btn-twitter fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="btn-google form-social-item flex-c-m bg3">
+              <i class="btn-google fa fa-google" aria-hidden="true"></i>
+            </a>
+          </div>
+          <br>
+          <a class="create-account" ui-sref="register" href="#">Create an account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="login-more"></div>
+</div>
+
+
+<router-outlet></router-outlet>
